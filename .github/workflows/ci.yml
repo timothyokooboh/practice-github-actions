@@ -1,24 +1,24 @@
 name: build & format
 
-on: 
-    push: 
-        branches:
-            - main
-    pull_request:
-        branches:
-            - main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-    actions:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
+  actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-            - name: install dependencies
-              run: yarn
+      - name: install dependencies
+        run: yarn
 
-            - name: format with prettier
-              run: yarn format
-            
-            - name: build code
-              run: yarn build
+      - name: check formatting with prettier
+        run: yarn format:check
+
+      - name: build code
+        run: yarn build
