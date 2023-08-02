@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "format": "prettier --write .",
+    "format:fix": "yarn format --fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -13,6 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "prettier": "^3.0.0",
     "vite": "^4.4.5"
   }
 }
